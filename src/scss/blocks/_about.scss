@@ -1,0 +1,94 @@
+.about {
+  margin-bottom: 151rem;
+  display: flex;
+  gap: 91rem;
+  justify-content: space-between;
+  align-items: center;
+  @include desctop-small {
+    flex-wrap: wrap;
+  }
+  @include mobile {
+    gap: 50rem;
+    margin-bottom: 140rem;
+    padding: 0 24rem;
+  }
+  &__info {
+    max-width: 536rem;
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+
+  &__info-title {
+    @include text($ff-graph, 700, 80rem, 84rem, $white);
+    margin-bottom: 24rem;
+    @include mobile {
+      @include text($ff-graph, 700, 42rem, 63rem, $white);
+    }
+  }
+
+  &__info-text {
+    @include text($ff, 400, 21rem, 39rem, $text);
+    letter-spacing: -0.66rem;
+    margin-bottom: 50rem;
+    @include mobile {
+      @include text($ff-graph, 700, 16rem, 24rem, $text);
+    }
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    height: 712rem;
+    @include tablet-small {
+      height: auto;
+    }
+  }
+
+  &__img-bg1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @include desctop-small {
+      right: 50%;
+      transform: translateX(50%);
+    }
+    @include tablet-small {
+        display: none;
+      }
+  }
+
+  &__img-bg2 {
+    position: absolute;
+    bottom: 66rem;
+    right: 29rem;
+    z-index: -5;
+    @include desctop-small {
+      right: calc(50% + 29rem);
+      transform: translateX(50%);
+    }
+    @include tablet-small {
+       display: none;
+      }
+  }
+
+  &__img-man {
+    position: absolute;
+    max-width: 655rem;
+    max-height: 713rem;
+    right: -80rem;
+    @include desctop-small {
+      right: 50%;
+      transform: translateX(50%);
+    }
+    @include tablet-small {
+      display: none;
+    }
+  }
+  &__img-small {
+    display: none;
+    @include tablet-small {
+        display: block;
+      }
+  }
+}

@@ -1,0 +1,24 @@
+.contact {
+  background: $bg-cont;
+  margin-bottom: 50rem;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 506rem;
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 50rem;
+      height: auto;
+      padding: 80rem 0;
+    }
+  }
+
+  &__title {
+    @include text($ff-graph, 700, 60rem, 66rem, $white);
+    max-width: 826rem;
+    @include mobile {
+      @include text($ff-graph, 700, 36rem, 54rem, $white);
+    }
+  }
+}

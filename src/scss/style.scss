@@ -1,0 +1,15 @@
+@import 'normalize';
+@import 'reset';
+@import 'fonts';
+@import 'vars';
+@import 'mixins';
+@import 'base';
+@import '../../node_modules/swiper/swiper-bundle';
+
+@import 'blocks/header';
+@import 'blocks/footer';
+@import 'blocks/about';
+@import 'blocks/video';
+@import 'blocks/service';
+@import 'blocks/portfolio';
+@import 'blocks/contact';

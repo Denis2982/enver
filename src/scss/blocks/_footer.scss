@@ -1,0 +1,30 @@
+.footer {
+    margin-bottom: 100rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 40rem;
+  }
+
+  &__nav-item {
+  }
+
+  &__nav-link {
+    @include text($ff, 400, 18rem, 25rem, $text);
+  }
+  &__copy {
+    @include text($ff, 400, 16rem, 38rem, $text);
+    letter-spacing: -0.5rem;
+  }
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    @include text($ff-logo, 700, 28rem, 39rem, $white);
+  }
+

@@ -1,0 +1,107 @@
+.header {
+  margin: 40rem auto 23rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include tablet-small {   
+    margin: 40rem auto 66rem auto;
+  }  
+}
+.nav {
+  flex-grow: 1;
+  @include tablet {
+    flex-grow: 0;
+  }
+  &__list {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 24rem;
+    transition: $transition;
+    @include tablet {
+      position: fixed;
+      padding: 0 30rem;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      z-index: 5;
+      background: $bg;
+      left: 0;
+      top: 0;
+      gap: 40rem;
+      box-shadow: 3rem 3rem 8rem 1rem $bg-btn;
+      transform: translateX(-150%);
+      &--open {
+        transform: translateX(0);
+      }
+    }
+  }
+  &__list-link {
+    @include text($ff, 400, 18rem, 25rem, $text);
+    position: relative;
+    transition: $transition;
+    &--active {
+      color: $bg-btn;
+      font-weight: 600;
+    }
+    &:hover {
+      color: $bg;
+    }
+  }
+  &__list-item {
+    &:first-child,
+    &:last-of-type {
+      margin-left: auto;
+    }
+  }
+  &__burger {
+    display: none;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    width: 30rem;
+    height: 18rem;
+    cursor: pointer;
+    @include tablet {      
+        display: flex;      
+    }
+    span {
+      height: 2rem;
+      width: 100%;
+      border-radius: 4rem;
+      transform: scale(1);
+      background-color: $white;
+      transition: $transition;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2rem;
+      width: 100%;
+      border-radius: 4rem;
+      background-color: $white;
+      transition: $transition;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    &--open span {
+      transform: scale(0);
+    }
+    &--open::before {
+      top: 50%;
+      transform: rotate(-45deg) translate(0, -50%);
+    }
+    &--open::after {
+      bottom: 50%;
+      transform: rotate(45deg) translate(0, 50%);
+    }
+  }  
+}
+
+

@@ -1,0 +1,74 @@
+.service {
+  margin-bottom: 150rem;
+  @include mobile {
+    margin-bottom: 140rem;
+  }
+  &__info-title {
+    margin: 0 auto;
+    @include text($ff-graph, 700, 60rem, 70rem, $white);
+    margin-bottom: 50rem;
+    max-width: 695rem;
+    text-align: center;
+    @include mobile {
+      @include text($ff-graph, 700, 36rem, 54rem, $white);
+      text-align: left;
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24rem;
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include tablet-small {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: minmax(70rem, auto) auto 1fr;
+    text-align: center;
+    gap: 20rem;
+    padding: 48rem 43rem;
+  }
+  &__card-img {
+    width: 69rem;
+    height: 69rem;
+    background: $bg-serv1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    &._bg1,
+    &._bg5 {
+      background: $bg-serv1;
+    }
+    &._bg2,
+    &._bg6 {
+      background: $bg-serv2;
+    }
+    &._bg3,
+    &._bg4 {
+      background: $bg-serv3;
+    }
+  }
+  &__card-title {
+    @include text($ff, 600, 28rem, 38rem, $white);
+    letter-spacing: -0.75rem;
+    @include mobile {
+      @include text($ff, 600, 24rem, 33rem, $white);
+    }
+  }
+
+  &__card-text {
+    @include text($ff, 400, 20rem, 28rem, $text);
+    letter-spacing: -0.5rem;
+    @include mobile {
+      @include text($ff, 400, 16rem, 28rem, $text);
+    }
+  }
+}

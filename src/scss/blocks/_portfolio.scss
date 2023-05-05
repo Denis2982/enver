@@ -1,0 +1,60 @@
+.porfolio {
+  margin-bottom: 168rem;
+  @include mobile {
+   margin-bottom: 140rem;
+  }
+}
+
+.portfolio {
+  &__title {
+    @include text($ff, 800, 58rem, 79rem, $white);
+    margin-bottom: 70rem;
+    @include mobile {
+      @include text($ff-graph, 700, 36rem, 54rem, $white);
+    }
+  }
+
+  &__card {
+    background: $bg-card;
+    border-radius: 14rem;
+    padding: 24rem;
+    max-width: 384rem;
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+}
+.swiper {
+  height: 417rem;
+}
+.swiper-wrapper {
+ margin-bottom: 50rem;
+  
+}
+.swiper-slide {
+  max-width: 384rem;
+  & .portfolio__card {
+    margin-top: 116rem;
+  }
+  &-next .portfolio__card {
+    margin-top: 56rem;
+  }
+  &-active .portfolio__card {
+    margin-top: 0;
+  }
+}
+
+
+.swiper-pagination-bullet {
+  width: 8rem;
+  height: 8rem;
+  background: #121213;
+}
+
+.swiper-pagination-bullet-active {
+  width: 16rem;
+  height: 8rem;
+  background: #5454d4;
+  border-radius: 10rem;
+}
+

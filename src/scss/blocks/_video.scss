@@ -1,0 +1,32 @@
+.video {
+  margin-bottom: 150rem;
+  @include tablet-small {
+    margin-bottom: 140rem;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24rem;
+    margin-bottom: 50rem;
+    @include tablet-small {
+      grid-template-columns: 1fr;
+      gap: 30rem;
+    }
+  }
+
+  &__info-title {
+    @include text($ff-graph, 700, 60rem, 70rem, $white);
+    @include mobile {
+      @include text($ff-graph, 700, 36rem, 54rem, $white);
+    }
+  }
+
+  &__info-text {
+    @include text($ff, 400, 21rem, 39rem, $text);
+    letter-spacing: -0.66rem;
+    @include mobile {
+      @include text($ff, 400, 16rem, 24rem, $text);
+    }
+  }
+}

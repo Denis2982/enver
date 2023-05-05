@@ -1,0 +1,52 @@
+html {
+  font-size: 1px;
+}
+
+body {
+  background: $bg;
+  font-family: $ff;
+}
+
+.container {
+  max-width: 1248rem;
+  padding: 0 24rem;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  &._header {
+    @include text($ff, 400, 16rem, 22rem, $white);
+    letter-spacing: -0.5rem;
+    padding: 12rem 42rem;
+    background: transparent;
+    border: 1rem solid $white;
+    border-radius: 5rem;
+  }
+  &._about {
+    display: inline-flex;
+    gap: 8rem;
+    padding: 16rem 27rem;    
+    background: $bg-btn;
+    border-radius: 4rem;
+    @include text($ff, 700, 20rem, 27rem, $white);
+    @include mobile {   
+      padding: 11rem 19rem;   
+  }
+  }
+  &._contact{
+    padding: 16rem 49rem;    
+    background: $bg-btn;
+    border-radius: 4rem;
+    @include text($ff, 700, 21rem, 29rem, $white);
+  }
+}
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  @include text($ff-logo, 700, 28rem, 39rem, $white);
+}
