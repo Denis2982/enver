@@ -1,7 +1,27 @@
 .service {
   margin-bottom: 150rem;
+  position: relative;
   @include mobile {
     margin-bottom: 140rem;
+  }
+  &__blur {
+    position: absolute;
+    width: 860rem;
+    height: 2576rem;
+    top: -700rem;
+    left: 400rem;
+    transform: translateX(-50%);
+    background: linear-gradient(
+      180deg,
+      rgba(251, 168, 28, 0.048) 0%,
+      rgba(224, 86, 136, 0.018) 100%
+    );
+    filter: blur(150rem);
+    border-radius: 233.5rem;
+    transform: rotate(65.71deg);
+    @include mobile {
+      display: none;
+    }
   }
   &__info-title {
     margin: 0 auto;
@@ -69,6 +89,62 @@
     letter-spacing: -0.5rem;
     @include mobile {
       @include text($ff, 400, 16rem, 28rem, $text);
+    }
+  }
+  &__img-ic1 {
+    position: absolute;
+    z-index: -1;
+    top: -33rem;
+    left: 64rem;
+    @include desctop-small {
+      top: -5%;
+      left: 6%;
+    }
+    @include mobile {
+      width: 65rem;
+      height: 75rem;
+      top: -75rem;
+      left: 20rem;
+    }
+  }
+  &__img-ic2 {
+    position: absolute;
+    z-index: -1;
+    width: 42rem;
+    height: 42rem;
+    bottom: -35rem;
+    left: -15rem;
+    transform: rotate(25.34deg);
+    @include desctop-small {
+      bottom: -3%;
+      left: 1%;
+    }
+    @include mobile {
+      width: 28rem;
+      height: 28rem;
+      bottom: -45rem;
+      left: 24rem;
+      transform: rotate(0deg);
+    }
+  }
+  &__img-ic3 {
+    position: absolute;
+    z-index: -1;
+    width: 42rem;
+    height: 42rem;
+    top: 80rem;
+    right: 10rem;
+    transform: rotate(-31.42deg);
+    @include desctop-small {
+      top: 9%;
+      right: 1%;
+    }
+    @include mobile {
+      width: 28rem;
+      height: 28rem;
+      top: 93rem;
+      right: 10rem;
+      transform: rotate(0deg);
     }
   }
 }

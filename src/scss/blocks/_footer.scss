@@ -1,30 +1,42 @@
 .footer {
-    margin-bottom: 100rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 50rem 0 100rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include desctop-small {
+    padding: 140rem 0 50rem;
+    flex-direction: column;
+    gap: 40rem;
+  }
   &__nav {
     display: flex;
     align-items: center;
     gap: 40rem;
-  }
-
-  &__nav-item {
+    @include tablet-small {
+      flex-direction: column;
+    }
   }
 
   &__nav-link {
     @include text($ff, 400, 18rem, 25rem, $text);
+    @include tablet-small {
+      @include text($ff, 400, 18rem, 28rem, $text);
+      text-transform: capitalize;
+    }
   }
   &__copy {
     @include text($ff, 400, 16rem, 38rem, $text);
     letter-spacing: -0.5rem;
+    @include tablet-small {
+      @include text($ff-graph, 400, 18rem, 28rem, $white);
+      letter-spacing: 0;
+    }
   }
 }
 
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 8rem;
-    @include text($ff-logo, 700, 28rem, 39rem, $white);
-  }
-
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  @include text($ff-logo, 700, 28rem, 39rem, $white);
+}

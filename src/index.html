@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,214 +12,346 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito+Sans:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-    />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
-    <!---Header--------------------------------------------------------------->
-    <header class="header container">
-      <a class="logo" href="#">
-        <img src="./img/Icons/logo.svg" alt="" />
-        <span>Enver</span>
-      </a>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__list-item">
-            <a class="nav__list-link nav__list-link--active" href="#">Home</a>
+    <div class="wrapper">
+      <!---Loader--------------------------------------------------------------->
+      <div class="loader">
+        <div class="loader__logo">
+          <img src="./img/Icons/logo.svg" alt="" />
+          <span>Enver</span>
+        </div>
+        <div class="loader__item"></div>
+        <div class="loader__item"></div>
+        <div class="loader__item"></div>
+        <div class="loader__item"></div>
+      </div>
+
+      <!---Header--------------------------------------------------------------->
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <a class="logo" href="#">
+              <img src="./img/Icons/logo.svg" alt="" />
+              <span>Enver</span>
+            </a>
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__list-item">
+                  <a class="nav__list-link nav__list-link--active" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav__list-item">
+                  <a class="nav__list-link" href="#">Services</a>
+                </li>
+                <li class="nav__list-item">
+                  <a class="nav__list-link" href="#">Our Project</a>
+                </li>
+                <li class="nav__list-item">
+                  <a class="nav__list-link" href="#">About us</a>
+                </li>
+                <li class="nav__list-item">
+                  <a class="btn _header" href="#">Contact us</a>
+                </li>
+              </ul>
+              <div class="nav__burger">
+                <span></span>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <!---About--------------------------------------------------------------->
+      <section class="about container">
+        <div class="about__info">
+          <div class="about__info-title">Build Your Awesome Platform</div>
+          <div class="about__info-text">
+            Enver studio is a digital studio that offers several services such
+            as UI/UX Design to developers, we will provide the best service for
+            those of you who use our services.
+          </div>
+          <a class="btn _about" href="#">
+            <span>Our Services</span>
+            <svg
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 7.5C8 6.94772 8.44772 6.5 9 6.5L17 6.5C17.5523 6.5 18 6.94772 18 7.5V15.5C18 16.0523 17.5523 16.5 17 16.5C16.4477 16.5 16 16.0523 16 15.5V9.91421L7.70711 18.2071C7.31658 18.5976 6.68342 18.5976 6.29289 18.2071C5.90237 17.8166 5.90237 17.1834 6.29289 16.7929L14.5858 8.5L9 8.5C8.44772 8.5 8 8.05228 8 7.5Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="about__img">
+          <img
+            class="about__img-bg1"
+            src="./img/main/about-bg1.png"
+            alt="user"
+          />
+          <img
+            class="about__img-bg2"
+            src="./img/main/about-bg2.png"
+            alt="user"
+          />
+          <img
+            class="about__img-man"
+            src="./img/main/about-man.png"
+            alt="user"
+          />
+          <img
+            class="about__img-small"
+            src="./img/main/man-small.png"
+            alt="user"
+          />
+          <img
+            class="about__img-ic1"
+            src="./img/UiIcons/icon_1.svg"
+            alt="icon"
+          />
+          <img
+            class="about__img-ic2"
+            src="./img/UiIcons/icon_2.svg"
+            alt="icon"
+          />
+          <img
+            class="about__img-ic3"
+            src="./img/UiIcons/icon_3.svg"
+            alt="icon"
+          />
+          <img
+            class="about__img-ic4"
+            src="./img/UiIcons/icon_4.svg"
+            alt="icon"
+          />
+        </div>
+        <div class="about__blur-1"></div>
+        <div class="about__blur-2"></div>
+      </section>
+
+      <!---Video--------------------------------------------------------------->
+      <section class="video container">
+        <div class="video__info">
+          <div class="video__info-title">Why Enver Is The Best Choice?</div>
+          <div class="video__info-text">
+            Watch this one minute video so you understand why you should use our
+            services!
+          </div>
+        </div>
+        <a href="#" class="video__img">
+          <img class="video__img-bg" src="./img/main/video.png" alt="video" />
+        </a>
+      </section>
+
+      <!---Service--------------------------------------------------------------->
+      <section class="service container">
+        <div class="service__info-title">The Service We Provide For You</div>
+        <div class="service__cards">
+          <div class="service__card _left">
+            <div class="service__card-img _bg1">
+              <img src="./img/Icons/service_1.svg" alt="service" />
+            </div>
+            <div class="service__card-title">Development</div>
+            <div class="service__card-text">
+              Create a platform with the best and coolest quality from us.
+            </div>
+          </div>
+          <div class="service__card _center">
+            <div class="service__card-img _bg2">
+              <img src="./img/Icons/service_2.svg" alt="service" />
+            </div>
+            <div class="service__card-title">UI/UX Designer</div>
+            <div class="service__card-text">
+              We provide UI/UX Design services, and of course with the best
+              quality
+            </div>
+          </div>
+          <div class="service__card _right">
+            <div class="service__card-img _bg3">
+              <img src="./img/Icons/service_3.svg" alt="service" />
+            </div>
+            <div class="service__card-title">Graphik Designer</div>
+            <div class="service__card-text">
+              We provide Graphic Design services, with the best designers
+            </div>
+          </div>
+          <div class="service__card _left">
+            <div class="service__card-img _bg4">
+              <img src="./img/Icons/service_4.svg" alt="service" />
+            </div>
+            <div class="service__card-title">Motion Graphik</div>
+            <div class="service__card-text">
+              Create a platform with the best and coolest quality from us.
+            </div>
+          </div>
+          <div class="service__card _center">
+            <div class="service__card-img _bg5">
+              <img src="./img/Icons/service_5.svg" alt="service" />
+            </div>
+            <div class="service__card-title">Photography</div>
+            <div class="service__card-text">
+              We provide Photography services, and of course with the best
+              quality
+            </div>
+          </div>
+          <div class="service__card _right">
+            <div class="service__card-img _bg6">
+              <img src="./img/Icons/service_6.svg" alt="service" />
+            </div>
+            <div class="service__card-title">Videography</div>
+            <div class="service__card-text">
+              Create a platform with the best and coolest quality from us.
+            </div>
+          </div>
+        </div>
+        <div class="service__blur"></div>
+        <img
+          class="service__ui service__img-ic1"
+          src="./img/UiIcons/icon_2.svg"
+          alt="icon"
+        />
+        <img
+          class="service__ui service__img-ic2"
+          src="./img/UiIcons/icon_4.svg"
+          alt="icon"
+        />
+        <img
+          class="service__ui service__img-ic3"
+          src="./img/UiIcons/icon_4.svg"
+          alt="icon"
+        />
+      </section>
+
+      <!---Portfolio--------------------------------------------------------------->
+      <section class="portfolio container">
+        <div class="portfolio__blur"></div>
+        <img
+          class="portfolio__img-ic1"
+          src="./img/UiIcons/icon_3.svg"
+          alt="icon"
+        />
+        <img
+          class="portfolio__img-ic2"
+          src="./img/UiIcons/icon_1.svg"
+          alt="icon"
+        />
+        <div class="portfolio__title">Our Awesome Portofolio</div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="portfolio__card">
+                <img src="./img/main/portfolio_1.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="portfolio__card">
+                <img src="./img/main/portfolio_2.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="portfolio__card">
+                <img src="./img/main/portfolio_3.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="portfolio__card">
+                <img src="./img/main/portfolio_1.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="portfolio__card">
+                <img src="./img/main/portfolio_2.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="portfolio__card">
+                <img src="./img/main/portfolio_3.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev">
+            <svg
+              width="8"
+              height="13"
+              viewBox="0 0 8 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.82486 12.4565C7.16841 12.1129 7.16841 11.5559 6.82486 11.2124L2.16869 6.55619L6.82486 1.90002C7.16841 1.55647 7.16841 0.999474 6.82486 0.655929C6.48132 0.312383 5.92432 0.312383 5.58077 0.655929L0.302555 5.93415C-0.0409903 6.27769 -0.0409904 6.83469 0.302555 7.17823L5.58077 12.4565C5.92432 12.8 6.48132 12.8 6.82486 12.4565Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div class="swiper-button-next">
+            <svg
+              width="8"
+              height="13"
+              viewBox="0 0 8 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.82486 12.4565C7.16841 12.1129 7.16841 11.5559 6.82486 11.2124L2.16869 6.55619L6.82486 1.90002C7.16841 1.55647 7.16841 0.999474 6.82486 0.655929C6.48132 0.312383 5.92432 0.312383 5.58077 0.655929L0.302555 5.93415C-0.0409903 6.27769 -0.0409904 6.83469 0.302555 7.17823L5.58077 12.4565C5.92432 12.8 6.48132 12.8 6.82486 12.4565Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!---Contact--------------------------------------------------------------->
+      <section class="contact">
+        <div class="container">
+          <div class="contact__inner">
+            <img
+              class="contact__img-ic1"
+              src="./img/UiIcons/icon_3.svg"
+              alt="icon"
+            />
+            <img
+              class="contact__img-ic2"
+              src="./img/UiIcons/icon_4.svg"
+              alt="icon"
+            />
+            <div class="contact__title">
+              Contact us for the service you want to use
+            </div>
+            <a href="#" class="btn _contact">Contact us</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- -Footer--------------------------------------------------------------->
+      <footer class="footer container">
+        <a class="logo" href="#">
+          <img src="./img/Icons/logo.svg" alt="" />
+          <span>Enver</span>
+        </a>
+        <ul class="footer__nav">
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">Support</a>
           </li>
-          <li class="nav__list-item">
-            <a class="nav__list-link" href="service.html">Services</a>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">Privacy Policy</a>
           </li>
-          <li class="nav__list-item">
-            <a class="nav__list-link" href="doctors.html">Our Project</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="nav__list-link" href="gallery.html">About us</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="btn _header" href="contact.html">Contact us</a>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">Terms and Conditions</a>
           </li>
         </ul>
-        <div class="nav__burger">
-          <span></span>
-        </div>
-      </nav>
-    </header>
+        <span class="footer__copy">© 2020 Enver, All Rights Reserved</span>
+      </footer>
+    </div>
 
-    <!---About--------------------------------------------------------------->
-    <section class="about container">
-      <div class="about__info">
-        <div class="about__info-title">Build Your Awesome Platform</div>
-        <div class="about__info-text">
-          Enver studio is a digital studio that offers several services such as
-          UI/UX Design to developers, we will provide the best service for those
-          of you who use our services.
-        </div>
-        <a class="btn _about" href="#">
-          <span>Our Services</span>
-          <img src="./img/Icons/arrow.svg" alt="arrow" />
-        </a>
-      </div>
-      <div class="about__img">
-        <img class="about__img-bg1" src="./img/main/about-bg1.png" alt="" />
-        <img class="about__img-bg2" src="./img/main/about-bg2.png" alt="" />
-        <img class="about__img-man" src="./img/main/about-man.png" alt="" />
-        <img class="about__img-small" src="./img/main/man-small.png" alt="">
-      </div>
-    </section>
-
-    <!---Video--------------------------------------------------------------->
-    <section class="video container">
-      <div class="video__info">
-        <div class="video__info-title">Why Enver Is The Best Choice?</div>
-        <div class="video__info-text">
-          Watch this one minute video so you understand why you should use our
-          services!
-        </div>
-      </div>
-      <a href="#" class="video__img">
-        <img class="video__img-bg" src="./img/main/video.png" alt="video" />        
-      </a>
-    </section>
-
-    <!---Service--------------------------------------------------------------->
-    <section class="service container">
-      <div class="service__info-title">The Service We Provide For You</div>
-      <div class="service__cards">
-        <div class="service__card">
-          <div class="service__card-img _bg1">
-            <img src="./img/Icons/service_1.svg" alt="service" />
-          </div>
-          <div class="service__card-title">Development</div>
-          <div class="service__card-text">
-            Create a platform with the best and coolest quality from us.
-          </div>
-        </div>
-        <div class="service__card">
-          <div class="service__card-img _bg2">
-            <img src="./img/Icons/service_2.svg" alt="service" />
-          </div>
-          <div class="service__card-title">UI/UX Designer</div>
-          <div class="service__card-text">
-            We provide UI/UX Design services, and of course with the best
-            quality
-          </div>
-        </div>
-        <div class="service__card">
-          <div class="service__card-img _bg3">
-            <img src="./img/Icons/service_3.svg" alt="service" />
-          </div>
-          <div class="service__card-title">Graphik Designer</div>
-          <div class="service__card-text">
-            We provide Graphic Design services, with the best designers
-          </div>
-        </div>
-        <div class="service__card">
-          <div class="service__card-img _bg4">
-            <img src="./img/Icons/service_4.svg" alt="service" />
-          </div>
-          <div class="service__card-title">Motion Graphik</div>
-          <div class="service__card-text">
-            Create a platform with the best and coolest quality from us.
-          </div>
-        </div>
-        <div class="service__card">
-          <div class="service__card-img _bg5">
-            <img src="./img/Icons/service_5.svg" alt="service" />
-          </div>
-          <div class="service__card-title">Photography</div>
-          <div class="service__card-text">
-            We provide Photography services, and of course with the best quality
-          </div>
-        </div>
-        <div class="service__card">
-          <div class="service__card-img _bg6">
-            <img src="./img/Icons/service_6.svg" alt="service" />
-          </div>
-          <div class="service__card-title">Videography</div>
-          <div class="service__card-text">
-            Create a platform with the best and coolest quality from us.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!---Portfolio--------------------------------------------------------------->    
-    <section class="porfolio container">
-      <div class="portfolio__title">Our Awesome Portofolio</div>
-      <div class="swiper">        
-        <div class="swiper-wrapper">         
-          <div class="swiper-slide">
-            <div class="portfolio__card">
-              <img src="./img/main/portfolio_1.png" alt="">
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="portfolio__card">
-              <img src="./img/main/portfolio_2.png" alt="">
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="portfolio__card">
-              <img src="./img/main/portfolio_3.png" alt="">
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="portfolio__card">
-              <img src="./img/main/portfolio_1.png" alt="">
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="portfolio__card">
-              <img src="./img/main/portfolio_2.png" alt="">
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="portfolio__card">
-              <img src="./img/main/portfolio_3.png" alt="">
-            </div>
-          </div>           
-        </div>        
-        <div class="swiper-pagination"></div> 
-      </div>
-    </section>
-
-    <!---Contact--------------------------------------------------------------->  
-    <section class="contact">
-      <div class="container">
-        <div class="contact__inner">
-          <div class="contact__title">Contact us for the service you want to use</div>
-          <a href="#" class="btn _contact">Contact us</a>
-        </div>
-      </div>
-    </section>
-
-    <!---Footer--------------------------------------------------------------->  
-    <footer class="footer container">
-      <a class="logo" href="#">
-        <img src="./img/Icons/logo.svg" alt="" />
-        <span>Enver</span>
-      </a>
-      <ul class="footer__nav">
-        <li class="footer__nav-item">
-          <a href="#" class="footer__nav-link">Support</a>
-        </li>
-        <li class="footer__nav-item">
-          <a href="#" class="footer__nav-link">Privacy Policy</a>
-        </li>
-        <li class="footer__nav-item">
-          <a href="#" class="footer__nav-link">Terms and Conditions</a>
-        </li>
-      </ul>
-      <span class="footer__copy">© 2020 Enver, All Rights Reserved</span>
-    </footer>
-
-
-    
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="js/app.min.js"></script>
   </body>
 </html>

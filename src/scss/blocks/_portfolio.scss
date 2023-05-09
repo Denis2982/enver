@@ -1,19 +1,19 @@
-.porfolio {
-  margin-bottom: 168rem;
-  @include mobile {
-   margin-bottom: 140rem;
-  }
-}
-
 .portfolio {
+  margin-bottom: 168rem;
+  position: relative;
+  @include mobile {
+    margin-bottom: 140rem;
+    padding: 0;
+  }
   &__title {
     @include text($ff, 800, 58rem, 79rem, $white);
     margin-bottom: 70rem;
     @include mobile {
       @include text($ff-graph, 700, 36rem, 54rem, $white);
+      margin-bottom: 50rem;
+      padding: 0 24rem;
     }
   }
-
   &__card {
     background: $bg-card;
     border-radius: 14rem;
@@ -22,33 +22,113 @@
     @include mobile {
       max-width: 100%;
     }
+    img {
+      width: 100%;
+    }
   }
-}
-.swiper {
-  height: 417rem;
-}
-.swiper-wrapper {
- margin-bottom: 50rem;
-  
-}
-.swiper-slide {
-  max-width: 384rem;
-  & .portfolio__card {
-    margin-top: 116rem;
+  &__blur {
+    position: absolute;
+    z-index: -1;
+    width: 600rem;
+    height: 652rem;
+    top: -200rem;
+    right: -320rem;
+    background: linear-gradient(
+      180deg,
+      rgba(84, 84, 212, 0.2) 0%,
+      rgba(84, 84, 212, 0.084) 100%
+    );
+    filter: blur(150rem);
+    border-radius: 233.5rem;
+    transform: matrix(-0.58, -0.81, -0.81, 0.58, 0, 0);
+    @include mobile {
+      display: none;
+    }
   }
-  &-next .portfolio__card {
-    margin-top: 56rem;
+  &__img-ic1 {
+    position: absolute;
+    z-index: -1;
+    top: 20rem;
+    right: 46rem;
+    width: 62rem;
+    height: 73rem;
+    @include desctop-small {
+      top: 1%;
+      right: 1%;
+    }
+    @include mobile {
+      width: 39.37rem;
+      height: 46.32rem;
+      top: 51rem;
+      right: 24rem;
+      transform: rotate(-20.89deg);
+    }
   }
-  &-active .portfolio__card {
-    margin-top: 0;
+  &__img-ic2 {
+    position: absolute;
+    z-index: -1;
+    bottom: -15rem;
+    left: -40rem;
+    width: 95rem;
+    height: 28rem;
+    @include desctop-small {
+      bottom: -1%;
+      left: 1%;
+    }
+    @include mobile {
+      width: 61.07rem;
+      height: 18rem;
+      bottom: -63rem;
+      left: 33rem;
+    }
   }
 }
 
+.swiper-wrapper {
+  margin-bottom: 50rem;
+  @include mobile {
+    margin-bottom: 88rem;
+  }
+}
+.swiper-slide {
+  max-width: 384rem;
+  @include tablet {
+    max-width: 100%;
+  }
+  @include mobile {
+    max-width: 100%;
+  }
+
+  .portfolio__card {
+    transition: $transition;
+    margin-top: 116rem;
+    @include mobile {
+      margin-top: 0;
+    }
+  }
+  &-next .portfolio__card {
+    margin-top: 58rem;
+    transition: $transition;
+    @include mobile {
+      margin-top: 0;
+    }
+  }
+  &-active .portfolio__card {
+    margin-top: 0;
+    transition: $transition;
+  }
+}
+
+.swiper-pagination {
+  @include mobile {
+    display: none;
+  }
+}
 
 .swiper-pagination-bullet {
   width: 8rem;
   height: 8rem;
-  background: #121213;
+  background: $white;
 }
 
 .swiper-pagination-bullet-active {
@@ -58,3 +138,39 @@
   border-radius: 10rem;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+  @include mobile {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+    width: 38rem;
+    height: 38rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: $transition;
+    svg {
+      transition: $transition;
+    }
+    &::after {
+      content: "";
+    }
+    &:hover {
+      background: $bg-btn;
+      svg {
+        scale: 1.2;
+      }
+    }
+  }
+}
+.swiper-button-next {
+  right: calc(50% - 44rem);
+  svg {
+    transform: rotate(180deg);
+  }
+}
+.swiper-button-prev {
+  left: calc(50% - 44rem);
+}

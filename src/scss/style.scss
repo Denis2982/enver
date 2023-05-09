@@ -1,5 +1,6 @@
 @import 'normalize';
 @import 'reset';
+@import 'locomotive';
 @import 'fonts';
 @import 'vars';
 @import 'mixins';
@@ -13,3 +14,4 @@
 @import 'blocks/service';
 @import 'blocks/portfolio';
 @import 'blocks/contact';
+@import 'blocks/loader';

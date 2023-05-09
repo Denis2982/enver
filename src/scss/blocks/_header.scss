@@ -1,16 +1,19 @@
 .header {
-  margin: 40rem auto 23rem auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @include tablet-small {   
-    margin: 40rem auto 66rem auto;
-  }  
+  padding: 40rem 0 23rem;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @include desctop-small {
+    padding: 40rem 0 66rem;
+  }
 }
 .nav {
   flex-grow: 1;
   @include tablet {
     flex-grow: 0;
+    z-index: 10;
   }
   &__list {
     display: flex;
@@ -20,19 +23,18 @@
     transition: $transition;
     @include tablet {
       position: fixed;
-      padding: 0 30rem;
+      padding: 0 20rem;
       flex-direction: column;
-      height: 100%;
-      justify-content: center;
-      z-index: 5;
+      width: 100%;
+      height: 100vh;
+      z-index: 10;
       background: $bg;
       left: 0;
       top: 0;
-      gap: 40rem;
-      box-shadow: 3rem 3rem 8rem 1rem $bg-btn;
-      transform: translateX(-150%);
+      gap: 1rem;
+      transform: translateY(-100vh);
       &--open {
-        transform: translateX(0);
+        transform: translateY(0);
       }
     }
   }
@@ -45,13 +47,27 @@
       font-weight: 600;
     }
     &:hover {
-      color: $bg;
+      color: $white;
     }
   }
   &__list-item {
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-self: stretch;
+      flex: 1;
+      border-bottom: 1rem solid $white;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
     &:first-child,
     &:last-of-type {
       margin-left: auto;
+      @include tablet {
+        margin-left: initial;
+      }
     }
   }
   &__burger {
@@ -59,17 +75,17 @@
     justify-content: end;
     align-items: center;
     position: relative;
-    z-index: 5;
-    width: 30rem;
-    height: 18rem;
+    z-index: 15;
+    width: 16rem;
+    height: 12rem;
     cursor: pointer;
-    @include tablet {      
-        display: flex;      
+    @include tablet {
+      display: flex;
     }
     span {
       height: 2rem;
-      width: 100%;
-      border-radius: 4rem;
+      width: 10rem;
+      border-radius: 2rem;
       transform: scale(1);
       background-color: $white;
       transition: $transition;
@@ -79,16 +95,17 @@
       content: "";
       position: absolute;
       height: 2rem;
-      width: 100%;
-      border-radius: 4rem;
+      border-radius: 2rem;
       background-color: $white;
       transition: $transition;
     }
     &::before {
       top: 0;
+      width: 16rem;
     }
     &::after {
       bottom: 0;
+      width: 6rem;
     }
     &--open span {
       transform: scale(0);
@@ -98,10 +115,10 @@
       transform: rotate(-45deg) translate(0, -50%);
     }
     &--open::after {
+      width: 16rem;
       bottom: 50%;
-      transform: rotate(45deg) translate(0, 50%);
+      transform: rotate(45deg) translate(1rem, 50%);
     }
-  }  
+  }
 }
-
 

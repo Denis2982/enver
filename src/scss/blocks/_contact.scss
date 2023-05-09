@@ -1,12 +1,46 @@
 .contact {
   background: $bg-cont;
-  margin-bottom: 50rem;
+  &__img-ic1 {
+    position: absolute;
+    z-index: -1;
+    bottom: 64rem;
+    left: 39rem;
+    @include desctop-small {
+      bottom: 2%;
+      left: 3%;
+    }
+    @include mobile {
+      bottom: 11rem;
+      left: -15rem;
+      width: 39.37px;
+      height: 46.32px;
+    }
+  }
+  &__img-ic2 {
+    position: absolute;
+    z-index: -1;
+    top: 69rem;
+    right: 15rem;
+    width: 42px;
+    height: 42px;
+    @include desctop-small {
+      top: 3%;
+      right: 1%;
+    }
+    @include mobile {
+      top: 12rem;
+      right: 5rem;
+      width: 28px;
+      height: 28px;
+    }
+  }
   &__inner {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 506rem;
-    @include tablet {
+    @include desctop-small {
       flex-wrap: wrap;
       gap: 50rem;
       height: auto;

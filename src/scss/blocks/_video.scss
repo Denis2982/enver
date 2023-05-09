@@ -27,6 +27,7 @@
     letter-spacing: -0.66rem;
     @include mobile {
       @include text($ff, 400, 16rem, 24rem, $text);
+      letter-spacing: 0;
     }
   }
 }

@@ -44,5 +44,9 @@
     "webp-converter": "2.2.3",
     "webpack": "^5.79.0",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "locomotive-scroll": "^4.1.4",
+    "smooth-scrollbar": "^8.8.3"
   }
 }
